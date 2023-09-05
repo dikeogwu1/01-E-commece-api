@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang=en>
+ 
+ <head>
+ <meta charset=utf-8>
+ <meta http-equiv=x-ua-compatible content="ie=edge">
+ <meta name=viewport content="width=device-width,initial-scale=1">
+ <link rel="stylesheet" href="style.css">
+ <title>E-Commerce-Api | Docs</title>
+</head>
+
+<body class=container-fluid>
+ <main class=row>
+  <div class="col-md-12 collection-intro">
+   <h3>E-Commerce-Api</h3>
+   <p>
+  </div>
+  <div class=col-md-12>
+   <div class=col-md-3>
+    <ul>
+     <li><strong><a href=#Auth>Auth</a></strong>
+      <ul>
+       <li><a class=endpoint_menu href=#jump-Auth-LogoutUser>Logout User</a>
+       <li><a class=endpoint_menu href=#jump-Auth-LoginUser>Login User</a>
+       <li><a class=endpoint_menu href=#jump-Auth-RegisterUser>Register User</a>
+      </ul>
+     <li><strong><a href=#User>User</a></strong>
+      <ul>
+       <li><a class=endpoint_menu href=#jump-User-GetAllUsers>Get All Users</a>
+       <li><a class=endpoint_menu href=#jump-User-GetSingleUser>Get Single User</a>
+       <li><a class=endpoint_menu href=#jump-User-UpdateUser>Update User</a>
+       <li><a class=endpoint_menu href=#jump-User-UpdatePassword>Update Password</a>
+       <li><a class=endpoint_menu href=#jump-User-ShowCurrentUser>Show Current User</a>
+      </ul>  
+     <li><strong><a href=#Product>Product</a></strong>
+      <ul>
+       <li><a class=endpoint_menu href=#jump-Product-GetAllProducts>Get All Products</a>
+       <li><a class=endpoint_menu href=#jump-Product-CreateProduct>Create Product</a>
+       <li><a class=endpoint_menu href=#jump-Product-GetSingleProduct>Get Single Product</a>
+       <li><a class=endpoint_menu href=#jump-Product-UpdateProduct>Update Product</a>
+       <li><a class=endpoint_menu href=#jump-Product-DeleteProduct>Delete Product</a>
+       <li><a class=endpoint_menu href=#jump-Product-UploadProductImage>Upload Product Image</a>
+       <li><a class=endpoint_menu href=#jump-Product-GetSingleProductReviews>Get Single Product Reviews</a>
+      </ul>
+     <li><strong><a href=#Review>Review</a></strong>
+      <ul>
+       <li><a class=endpoint_menu href=#jump-Review-GetAllReviews>Get All Reviews</a>
+       <li><a class=endpoint_menu href=#jump-Review-CreateReview>Create Review</a>
+       <li><a class=endpoint_menu href=#jump-Review-GetSingleReview>Get Single Review</a>
+       <li><a class=endpoint_menu href=#jump-Review-UpdateReview>Update Review</a>
+       <li><a class=endpoint_menu href=#jump-Review-DeleteReview>Delete Review</a>
+      </ul>
+     <li><strong><a href=#Order>Order</a></strong>
+      <ul>
+       <li><a class=endpoint_menu href=#jump-Order-CreateOrder>Create Order</a>
+       <li><a class=endpoint_menu href=#jump-Order-GetAllOrders>Get All Orders</a>
+       <li><a class=endpoint_menu href=#jump-Order-GetSingleOrder>Get Single Order</a>
+       <li><a class=endpoint_menu href=#jump-Order-GetCurrentUserOrders>Get Current User Orders</a>
+       <li><a class=endpoint_menu href=#jump-Order-UpdateOrder>Update Order</a>
+      </ul>
+    </ul>
+   </div>
+   <div class=col-md-9>
+    <div class="panel panel-default">
+     <div class=panel-heading>
+      <h3 class=panel-title id=Auth>Auth
+       <span class=badge>3</span>
+      </h3>
+     </div>
+     <div class=panel-body>
+      <p>
+      <div class=request-item>
+       <div class=panel-group id=accordion-Auth>
+        <div class="panel panel-info" id=jump-Auth-LogoutUser>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-Auth href=#collapse-Auth-LogoutUser>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Logout User</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/auth/logout
+           </h4>
+          </a></div>
+         <div id=collapse-Auth-LogoutUser class="panel-collapse collapse">
+          <div class=panel-body></div>
+         </div>
+        </div>
+        <div class="panel panel-success" id=jump-Auth-LoginUser>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-success data-toggle=collapse data-parent=#accordion-Auth href=#collapse-Auth-LoginUser>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Login User</strong> &nbsp;|&nbsp;
+            <strong class="request-method border-success">POST</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/auth/login
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-Auth-LoginUser class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;email&#34;:&#34;fabian@gmail.com&#34;,
+            &#34;password&#34;:&#34;secret&#34;
+            }</span>
+           <div class=clearfix></div>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-success" id=jump-Auth-RegisterUser>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-success data-toggle=collapse data-parent=#accordion-Auth href=#collapse-Auth-RegisterUser>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Register User</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-success">POST</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/auth/register
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-Auth-RegisterUser class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;name&#34;:&#34;David&#34;,
+            &#34;password&#34;:&#34;secret&#34;,
+            &#34;email&#34;:&#34;david@gmail.com&#34;
+            }</span>
+           <div class=clearfix></div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="panel panel-default">
+     <div class=panel-heading>
+      <h3 class=panel-title id=User>User
+       <span class=badge>5</span>
+      </h3>
+     </div>
+     <div class=panel-body>
+      <p>
+      <div class=request-item>
+       <div class=panel-group id=accordion-User>
+        <div class="panel panel-info" id=jump-User-GetAllUsers>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-User href=#collapse-User-GetAllUsers>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get All Users</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/users
+           </h4>
+          </a></div>
+         <div id=collapse-User-GetAllUsers class="panel-collapse collapse">
+          <div class=panel-body></div>
+         </div>
+        </div>
+        <div class="panel panel-info" id=jump-User-GetSingleUser>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-User href=#collapse-User-GetSingleUser>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get Single User</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/users/64ea5543cd028febcd199c9d
+           </h4>
+          </a></div>
+         <div id=collapse-User-GetSingleUser class="panel-collapse collapse">
+          <div class=panel-body></div>
+         </div>
+        </div>
+        <div class="panel panel-warning" id=jump-User-UpdateUser>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-warning data-toggle=collapse data-parent=#accordion-User href=#collapse-User-UpdateUser>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Update User</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-warning">PATCH</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/users/updateUser
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-User-UpdateUser class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;name&#34;:&#34;anita&#34;,
+            &#34;email&#34;:&#34;anita@gmail.com&#34;
+            }</span>
+           <div class=clearfix></div>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-warning" id=jump-User-UpdatePassword>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-warning data-toggle=collapse data-parent=#accordion-User href=#collapse-User-UpdatePassword>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Update Password</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-warning">PATCH</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/users/updatePassword
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-User-UpdatePassword class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;oldPassword&#34;:&#34;emmanuel&#34;,
+            &#34;newPassword&#34;:&#34;secret&#34;
+            }</span>
+           <div class=clearfix></div>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-info" id=jump-User-ShowCurrentUser>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-User href=#collapse-User-ShowCurrentUser>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Show Current User</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/users/showMe
+           </h4>
+          </a></div>
+         <div id=collapse-User-ShowCurrentUser class="panel-collapse collapse">
+          <div class=panel-body></div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="panel panel-default">
+     <div class=panel-heading>
+      <h3 class=panel-title id=Product>Product
+       <span class=badge>7</span>
+      </h3>
+     </div>
+     <div class=panel-body>
+      <p>
+      <div class=request-item>
+       <div class=panel-group id=accordion-Product>
+        <div class="panel panel-info" id=jump-Product-GetAllProducts>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-Product href=#collapse-Product-GetAllProducts>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get All Products</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/products
+           </h4>
+          </a></div>
+         <div id=collapse-Product-GetAllProducts class="panel-collapse collapse">
+          <div class=panel-body></div>
+         </div>
+        </div>
+        <div class="panel panel-success" id=jump-Product-CreateProduct>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-success data-toggle=collapse data-parent=#accordion-Product
+           href=#collapse-Product-CreateProduct>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Create Product</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-success">POST</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/products
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-Product-CreateProduct class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;name&#34;:&#34;Timberland desk&#34;,
+            &#34;company&#34;:&#34;marcos&#34;,
+            &#34;category&#34;:&#34;office&#34;,
+            &#34;description&#34;:&#34;Old schools table&#34;,
+            &#34;price&#34;:120
+            }</span>
+           <div class=clearfix></div>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-info" id=jump-Product-GetSingleProduct>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-Product href=#collapse-Product-GetSingleProduct>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get Single Product</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/products/64efb39c9e3a8e33b185c1c5
+           </h4>
+          </a></div>
+         <div id=collapse-Product-GetSingleProduct class="panel-collapse collapse">
+          <div class=panel-body></div>
+         </div>
+        </div>
+        <div class="panel panel-warning" id=jump-Product-UpdateProduct>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-warning data-toggle=collapse data-parent=#accordion-Product
+           href=#collapse-Product-UpdateProduct>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Update Product</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-warning">PATCH</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/products/64efa964c857d76ec1392688
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-Product-UpdateProduct class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;name&#34;:&#34;Ikea Laptop touch screen&#34;
+            }</span>
+           <div class=clearfix></div>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-danger" id=jump-Product-DeleteProduct>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-danger data-toggle=collapse
+           data-parent=#accordion-Product href=#collapse-Product-DeleteProduct>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Delete Product</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-danger">DELETE</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/products/64efa964c857d76ec1392688
+           </h4>
+          </a></div>
+         <div id=collapse-Product-DeleteProduct class="panel-collapse collapse">
+          <div class=panel-body></div>
+         </div>
+        </div>
+        <div class="panel panel-success" id=jump-Product-UploadProductImage>
+         <div class=panel-heading><small class="pull-right text-muted">formdata</small>
+          <a class=text-success data-toggle=collapse data-parent=#accordion-Product
+           href=#collapse-Product-UploadProductImage>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Upload Product Image</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-success">POST</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/products/uploadImage
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-Product-UploadProductImage class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-primary">Body</h5>
+           <table class="table table-hover">
+            <thead>
+             <tr>
+              <th>Key
+              <th>Value
+              <th>Description
+            <tbody>
+             <tr>
+              <td>image
+              <td>
+              <td>
+           </table>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-info" id=jump-Product-GetSingleProductReviews>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-Product href=#collapse-Product-GetSingleProductReviews>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get Single Product
+             Reviews</strong> &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/products/64efb39c9e3a8e33b185c1c5/reviews
+           </h4>
+          </a></div>
+         <div id=collapse-Product-GetSingleProductReviews class="panel-collapse collapse">
+          <div class=panel-body></div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="panel panel-default">
+     <div class=panel-heading>
+      <h3 class=panel-title id=Review>Review
+       <span class=badge>5</span>
+      </h3>
+     </div>
+     <div class=panel-body>
+      <p>
+      <div class=request-item>
+       <div class=panel-group id=accordion-Review>
+        <div class="panel panel-info" id=jump-Review-GetAllReviews>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-Review href=#collapse-Review-GetAllReviews>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get All Reviews</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/reviews
+           </h4>
+          </a></div>
+         <div id=collapse-Review-GetAllReviews class="panel-collapse collapse">
+          <div class=panel-body></div>
+         </div>
+        </div>
+        <div class="panel panel-success" id=jump-Review-CreateReview>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-success data-toggle=collapse data-parent=#accordion-Review href=#collapse-Review-CreateReview>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Create Review</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-success">POST</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/reviews
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-Review-CreateReview class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;product&#34;:&#34;64f03899210f6dd97ebefc68&#34;,
+            &#34;title&#34;:&#34;The best product&#34;,
+            &#34;rating&#34;:5,
+            &#34;comment&#34;:&#34;The very best&#34;
+            }</span>
+           <div class=clearfix></div>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-info" id=jump-Review-GetSingleReview>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-Review href=#collapse-Review-GetSingleReview>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get Single Review</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/reviews/64f1bac79bca2f027f9f9d6c
+           </h4>
+          </a></div>
+         <div id=collapse-Review-GetSingleReview class="panel-collapse collapse">
+          <div class=panel-body></div>
+         </div>
+        </div>
+        <div class="panel panel-warning" id=jump-Review-UpdateReview>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-warning data-toggle=collapse data-parent=#accordion-Review href=#collapse-Review-UpdateReview>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Update Review</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-warning">PATCH</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/reviews/64f3ab3e3bc7145c4515eafb
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-Review-UpdateReview class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;title&#34;:&#34;Very nice product&#34;,
+            &#34;rating&#34;:5,
+            &#34;comment&#34;:&#34;I think i like the product&#34;
+            }</span>
+           <div class=clearfix></div>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-danger" id=jump-Review-DeleteReview>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-danger data-toggle=collapse
+           data-parent=#accordion-Review href=#collapse-Review-DeleteReview>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Delete Review</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-danger">DELETE</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/reviews/64f26b3d9400ed6e2f0fda77
+           </h4>
+          </a></div>
+         <div id=collapse-Review-DeleteReview class="panel-collapse collapse">
+          <div class=panel-body></div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="panel panel-default">
+     <div class=panel-heading>
+      <h3 class=panel-title id=Order>Order
+       <span class=badge>5</span>
+      </h3>
+     </div>
+     <div class=panel-body>
+      <p>
+      <div class=request-item>
+       <div class=panel-group id=accordion-Order>
+        <div class="panel panel-success" id=jump-Order-CreateOrder>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-success data-toggle=collapse data-parent=#accordion-Order href=#collapse-Order-CreateOrder>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Create Order</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-success">POST</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/orders
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-Order-CreateOrder class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;tax&#34;: 499,
+            &#34;shippingFee&#34;: 799,
+            &#34;items&#34;: [
+            {
+            &#34;name&#34;: &#34;bed&#34;,
+            &#34;price&#34;: 2699,
+            &#34;image&#34;:
+            &#34;https://dl.airtable.com/.attachmentThumbnails/e8bc3791196535af65f40e36993b9e1f/438bd160&#34;,
+            &#34;amount&#34;: 3,
+            &#34;product&#34;: &#34;64f03899210f6dd97ebefc68&#34;
+            },
+            {
+            &#34;name&#34;: &#34;chair&#34;,
+            &#34;price&#34;: 2999,
+            &#34;image&#34;:
+            &#34;https://dl.airtable.com/.attachmentThumbnails/e8bc3791196535af65f40e36993b9e1f/438bd160&#34;,
+            &#34;amount&#34;: 2,
+            &#34;product&#34;: &#34;64f26aa79400ed6e2f0fda72&#34;
+            }
+            ]
+            }</span>
+           <div class=clearfix></div>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-info" id=jump-Order-GetAllOrders>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-Order href=#collapse-Order-GetAllOrders>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get All Orders</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/orders
+           </h4>
+          </a></div>
+         <div id=collapse-Order-GetAllOrders class="panel-collapse collapse">
+          <div class=panel-body></div>
+         </div>
+        </div>
+        <div class="panel panel-info" id=jump-Order-GetSingleOrder>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-Order href=#collapse-Order-GetSingleOrder>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get Single Order</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/orders/64f47901c99ccdd49d734733
+           </h4>
+          </a></div>
+         <div id=collapse-Order-GetSingleOrder class="panel-collapse collapse">
+          <div class=panel-body></div>
+         </div>
+        </div>
+        <div class="panel panel-info" id=jump-Order-GetCurrentUserOrders>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-Order href=#collapse-Order-GetCurrentUserOrders>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get Current User Orders</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/orders/showAllMyOrders
+           </h4>
+          </a></div>
+         <div id=collapse-Order-GetCurrentUserOrders class="panel-collapse collapse">
+          <div class=panel-body></div>
+         </div>
+        </div>
+        <div class="panel panel-warning" id=jump-Order-UpdateOrder>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-warning data-toggle=collapse data-parent=#accordion-Order href=#collapse-Order-UpdateOrder>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Update Order</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-warning">PATCH</strong>
+            &nbsp;
+            https://zero1-e-commerce-api.onrender.com/orders/64f4761dc99ccdd49d73472d
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-Order-UpdateOrder class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;paymentIntent&#34;:&#34;someRandomId&#34;
+            }</span>
+           <div class=clearfix></div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </main>
+
+ <footer class="navbar-default navbar-fixed-bottom">
+  <div class=container-fluid>
+   <div class="span12 text-center"><span data-toggle=tooltip
+     title="If the application help you, please feel free to give a star to the project in github. Your star inspire me to work more on open-source projects like this!">Generated
+     at 2023-09-05 11:24:00 by <a href=https://github.com/thedevsaddam/docgen target=_blank
+      class=text-muted>docgen</a></span></div>
+  </div>
+ </footer>
+ <script src="./browser-app.js"></script>
+</body>
+
+</html>
